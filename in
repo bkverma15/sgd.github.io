@@ -1,0 +1,185 @@
+    <div class="nav-actions">
+      <a class="phone-pill" href="tel:9950456693">
+        <span>📞</span> 9950456693
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation" id="menuToggle">☰</button>
+      <nav id="mainNav">
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero" aria-labelledby="main-heading">
+    <div class="card">
+      <div>
+        <h1 id="main-heading">किफायती और भरोसेमंद ड्राय क्लीनिंग</h1>
+        <p class="hero-sub">
+          नाज़ुक और परंपरागत कपड़ों (सिल्क, साड़ियाँ, सूट, bridal wear) के लिए expert fabric care — तेज़ pickup & delivery और eco‑friendly प्रोसेस।
+        </p>
+      </div>
+
+      <div class="hero-badges">
+        <div class="badge">
+          <span class="badge-dot"></span>
+          Same‑day / Next‑day delivery*
+        </div>
+        <div class="badge">
+          🚚 Free pickup (Nearby radius)
+        </div>
+        <div class="badge">
+          🌿 Gentle & eco‑friendly solvents
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <a class="cta-primary" href="#contact">
+          Request Pickup
+        </a>
+        <a class="cta-secondary" href="https://www.google.com/maps" target="_blank" rel="noopener">
+          <span>📍</span> Get Directions
+        </a>
+      </div>
+
+      <div id="services" class="hero-grid" aria-hidden="false">
+        <div class="service">
+          <h3>Dry Cleaning</h3>
+          <div class="muted">Sarees, Suits, Bridal wear</div>
+        </div>
+        <div class="service">
+          <h3>Laundry & Press</h3>
+          <div class="muted">Daily wear, Shirts, Trousers</div>
+        </div>
+        <div class="service">
+          <h3>Special Fabric Care</h3>
+          <div class="muted">Silk, Embroidery, Beaded items</div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="card aside-card">
+      <div class="aside-inner">
+        <h3 style="margin:0 0 6px;">Working Hours</h3>
+        <div class="hours">
+          <div>Monday — Sunday: 9:00 am – 9:00 pm</div>
+          <div><strong>Same‑day service (T&C apply)</strong></div>
+          <div style="margin-top:6px;">
+            <strong>Call:</strong> <a href="tel:9950456693" style="color:#a5f3fc;text-decoration:none;">9950456693</a>
+          </div>
+        </div>
+        <hr style="margin:12px 0;border:none;border-top:1px solid rgba(51,65,85,0.9);" />
+        <div style="font-weight:700;margin-bottom:4px;">Quick Links</div>
+        <div class="quick-links">
+          <a href="#reviews">Read customer reviews</a>
+          <a href="#pricing">Check pricing</a>
+          <a href="#contact">Book pickup / WhatsApp</a>
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <section id="reviews" class="section">
+    <h2>Customers love our service</h2>
+    <p class="section-sub">Regular clients trust us with wedding outfits, silk sarees और daily office wear.</p>
+    <div class="testimonials">
+      <div class="testi">
+        <div class="testi-name">Priya Sharma</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">Traditional outfits और silk sarees हमेशा perfect press के साथ मिलते हैं. Highly recommended.</p>
+      </div>
+      <div class="testi">
+        <div class="testi-name">Raj Kapoor</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">Pickup, cleaning और delivery — सब on time और spotless. भरोसेमंद service.</p>
+      </div>
+      <div class="testi">
+        <div class="testi-name">Ananya Desai</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">Silk और embroidered pieces को बहुत ध्यान से handle करते हैं. Colours fresh रहते हैं.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="section">
+    <h2>Pricing (Indicative)</h2>
+    <p class="section-sub">Final price fabric, डिजाइन और काम की detailing के अनुसार थोड़ा ऊपर / नीचे हो सकता है.</p>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <strong>Saree Cleaning</strong>
+        <div class="muted">₹150 – ₹500 (fabric और काम के अनुसार)</div>
+      </div>
+      <div class="price-card">
+        <strong>Suit / Coat / Blazer</strong>
+        <div class="muted">₹200 – ₹700 (lining / wool / design के अनुसार)</div>
+      </div>
+      <div class="price-card">
+        <strong>Shirt / Trouser</strong>
+        <div class="muted">₹60 – ₹150</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact & Order</h2>
+    <p class="section-sub">Pickup booking, urgent delivery या bulk order (hotel / office) के लिए call या WhatsApp करें.</p>
+
+    <div class="contact-grid">
+      <div class="card">
+        <strong>Phone / WhatsApp</strong>
+        <div class="contact-actions">
+          <a class="btn-chip" href="tel:9950456693">
+            <span>📞</span> Call: 9950456693
+          </a>
+          <a class="btn-chip" href="https://api.whatsapp.com/send?phone=919950456693" target="_blank" rel="noopener">
+            <span>💬</span> WhatsApp
+          </a>
+          <a class="btn-chip" href="mailto:info@example.com">
+            ✉️ Email
+          </a>
+        </div>
+        <hr style="margin:12px 0;border:none;border-top:1px solid rgba(51,65,85,0.9);" />
+        <strong>Address</strong>
+        <div class="contact-address">
+          (अपना पूरा पता यहाँ लिखें — area, landmark, city, pincode)
+        </div>
+      </div>
+
+      <div class="card">
+        <strong>Quick Order Form</strong>
+        <form onsubmit="event.preventDefault(); alert('Order received. We will call you shortly.');" aria-label="Order form">
+          <div class="form-grid">
+            <input class="input" required placeholder="आपका नाम" />
+            <input class="input" required placeholder="फ़ोन नंबर" />
+            <select class="select">
+              <option>Service required — Dry Clean</option>
+              <option>Wash & Fold</option>
+              <option>Special Care (Silk / Bridal)</option>
+            </select>
+            <textarea class="textarea" placeholder="मेस्सेज / विवरण (optional)"></textarea>
+            <button class="submit-btn" type="submit">
+              Request Pickup
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <strong>Shree Ganesh Dry Cleaners</strong>
+      <div>© <span id="year"></span> All rights reserved.</div>
+    </div>
+    <div class="social">
+      <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://api.whatsapp.com" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</footer>
