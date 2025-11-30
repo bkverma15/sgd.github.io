@@ -1,1 +1,225 @@
 
+
+<!-- index.html -->
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shree Ganesh Dry Cleaners — Best fabric care</title>
+  <meta name="description" content="Shree Ganesh Dry Cleaners — Reliable dry cleaning for sarees, suits and delicate fabrics. Call 9950456693" />
+
+  <!-- Simple modern CSS (single file) -->
+  <style>
+    :root{
+      --accent:#0f766e;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --bg:#f8fafc;
+      --max:1100px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#0f172a;line-height:1.5}
+    .container{max-width:var(--max);margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{
+      width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#34d399);
+      display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px;
+      box-shadow:0 6px 18px rgba(15,118,110,0.12);
+    }
+    nav a{margin-left:14px;text-decoration:none;color:var(--muted);font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr;gap:20px;align-items:center;margin-top:20px}
+    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(2,6,23,0.06)}
+    h1{margin:0;font-size:28px}
+    p.lead{color:var(--muted);margin:8px 0 0}
+    .cta{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:10px;background:var(--accent);color:white;text-decoration:none;font-weight:700}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+    .service{padding:14px;border-radius:10px;background:linear-gradient(180deg, #fff, #fbfdff);border:1px solid rgba(15,118,110,0.06)}
+    .service h3{margin:0 0 8px;font-size:16px}
+    .testimonials{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .testi{padding:12px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfdff);border:1px solid rgba(0,0,0,0.04)}
+    footer{margin-top:28px;padding:18px;border-radius:12px;background:linear-gradient(180deg,#fff,#fbfdff)}
+    .hours{display:flex;flex-direction:column;gap:6px}
+    .muted{color:var(--muted)}
+    .social{display:flex;gap:8px;align-items:center}
+    .social a{text-decoration:none;padding:8px;border-radius:8px;background:#f1f5f9;color:var(--muted);font-weight:600}
+    @media (min-width:800px){
+      .hero{grid-template-columns:1fr 360px}
+      .grid{grid-template-columns:repeat(3,1fr)}
+      .testimonials{grid-template-columns:repeat(3,1fr)}
+    }
+    /* small niceties */
+    .phone{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border-radius:10px;background:#ecfdf5;color:#065f46;text-decoration:none;font-weight:700}
+    .tagline{font-size:13px;color:var(--muted)}
+    .badge{display:inline-block;padding:6px 8px;border-radius:999px;background:#ecfeff;color:#064e3b;font-weight:700;font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">SG</div>
+        <div>
+          <div style="font-weight:800;font-size:18px">Shree Ganesh Dry Cleaners</div>
+          <div class="tagline">Best fabric care — Dry cleaning | Laundry | Silk care</div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:12px">
+        <a class="phone" href="tel:9950456693">📞 9950456693</a>
+        <nav>
+          <a href="#services">Services</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="main-heading" style="margin-top:18px">
+        <div class="card">
+          <h1 id="main-heading">किफायती और भरोसेमंद ड्राय क्लीनिंग</h1>
+          <p class="lead">हम परंपरागत और नाज़ुक कपड़ों (सिल्क, साड़ियाँ, सूट) की बेहतर देखभाल करते हैं — तेज turnaround और eco-friendly प्रक्रियाएँ।</p>
+
+          <div style="margin-top:14px;display:flex;gap:12px;flex-wrap:wrap">
+            <a class="cta" href="#contact">Order / Call Now</a>
+            <a class="badge" href="https://www.google.com/maps" target="_blank" rel="noopener">Get Directions</a>
+          </div>
+
+          <div style="margin-top:18px" class="grid" aria-hidden="false">
+            <div class="service">
+              <h3>Dry Cleaning</h3>
+              <div class="muted">Sarees, Suits, Bridal wear</div>
+            </div>
+            <div class="service">
+              <h3>Laundry & Pressing</h3>
+              <div class="muted">Daily wear, Shirts, Trousers</div>
+            </div>
+            <div class="service">
+              <h3>Special Care</h3>
+              <div class="muted">Silk, Embroidery, Beaded items</div>
+            </div>
+          </div>
+        </div>
+
+        <aside style="min-width:0">
+          <div class="card">
+            <h3 style="margin:0 0 8px">Working Hours</h3>
+            <div class="hours muted">
+              <div>Monday — Sunday: 9:00 am – 9:00 pm</div>
+              <div style="margin-top:8px"><strong>Call:</strong> <a href="tel:9950456693">9950456693</a></div>
+            </div>
+            <hr style="margin:12px 0;border:none;border-top:1px solid rgba(2,6,23,0.06)">
+            <div style="font-weight:700;margin-bottom:8px">Quick Links</div>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <a href="#reviews" style="text-decoration:none;color:var(--muted)">Read reviews</a>
+              <a href="#pricing" style="text-decoration:none;color:var(--muted)">View pricing</a>
+              <a href="#contact" style="text-decoration:none;color:var(--muted)">Contact / WhatsApp</a>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="reviews" style="margin-top:20px">
+        <h2 style="margin:4px 0 10px">Customers love our Service</h2>
+        <div class="testimonials">
+          <div class="testi">
+            <div style="font-weight:800">Priya Sharma</div>
+            <div class="muted" style="font-size:13px">★★★★★</div>
+            <p class="muted" style="margin-top:8px">Exceptional service! My traditional outfits were handled with utmost care. Highly recommended.</p>
+          </div>
+          <div class="testi">
+            <div style="font-weight:800">Raj Kapoor</div>
+            <div class="muted" style="font-size:13px">★★★★★</div>
+            <p class="muted" style="margin-top:8px">Reliable and efficient dry cleaning. They always deliver on time with spotless results.</p>
+          </div>
+          <div class="testi">
+            <div style="font-weight:800">Ananya Desai</div>
+            <div class="muted" style="font-size:13px">★★★★★</div>
+            <p class="muted" style="margin-top:8px">This dry cleaner pays attention to detail. My silk sarees have never looked better!</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" style="margin-top:20px">
+        <h2 style="margin:4px 0 10px">Pricing (Indicative)</h2>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+          <div class="card">
+            <strong>Saree Cleaning</strong>
+            <div class="muted" style="margin-top:6px">₹150 – ₹500 (fabric के अनुसार)</div>
+          </div>
+          <div class="card">
+            <strong>Suit / Coat</strong>
+            <div class="muted" style="margin-top:6px">₹200 – ₹700</div>
+          </div>
+          <div class="card">
+            <strong>Shirt / Trouser</strong>
+            <div class="muted" style="margin-top:6px">₹60 – ₹150</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:20px">
+        <h2 style="margin:4px 0 10px">Contact & Order</h2>
+
+        <div style="display:grid;grid-template-columns:1fr;gap:12px">
+          <div class="card">
+            <strong>Phone / WhatsApp</strong>
+            <div style="margin-top:8px">
+              <a class="phone" href="tel:9950456693">📞 9950456693</a>
+              <a style="margin-left:10px;text-decoration:none" class="phone" href="https://api.whatsapp.com/send?phone=919950456693" target="_blank" rel="noopener">💬 WhatsApp</a>
+            </div>
+            <hr style="margin:12px 0;border:none;border-top:1px solid rgba(2,6,23,0.06)">
+            <strong>Address</strong>
+            <div class="muted" style="margin-top:8px">(Add your full address here)</div>
+            <div style="margin-top:10px"><a class="cta" href="mailto:info@example.com">Email: info@example.com</a></div>
+          </div>
+
+          <div class="card">
+            <strong>Quick Order Form</strong>
+            <form onsubmit="event.preventDefault(); alert('Order received. We will call you shortly.');" aria-label="Order form">
+              <div style="display:flex;flex-direction:column;gap:8px">
+                <input required placeholder="आपका नाम" style="padding:10px;border-radius:8px;border:1px solid #e6eef0" />
+                <input required placeholder="फ़ोन नंबर" style="padding:10px;border-radius:8px;border:1px solid #e6eef0" />
+                <select style="padding:10px;border-radius:8px;border:1px solid #e6eef0">
+                  <option>Service required — Dry Clean</option>
+                  <option>Wash & Fold</option>
+                  <option>Special Care (Silk)</option>
+                </select>
+                <textarea placeholder="मेस्सेज / विवरण (optional)" style="padding:10px;border-radius:8px;border:1px solid #e6eef0"></textarea>
+                <button class="cta" type="submit" style="border:none;cursor:pointer">Request Pickup</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer style="margin-top:20px" class="card">
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;align-items:center">
+        <div>
+          <strong>Shree Ganesh Dry Cleaners</strong>
+          <div class="muted" style="font-size:13px;margin-top:6px">© <span id="year"></span> All rights reserved.</div>
+        </div>
+
+        <div style="display:flex;gap:12px;align-items:center">
+          <div class="social">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://api.whatsapp.com" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // small helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
