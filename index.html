@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shree Ganesh Dry Cleaners | Premium Laundry Service</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <style>
-        /* --- VARIABLES & RESET --- */
         :root {
-            --primary: #007bff; /* Clean Blue like UClean/Tumbledry */
-            --secondary: #0056b3;
-            --accent: #2ecc71; /* WhatsApp Green */
-            --dark: #333333;
-            --light: #f8f9fa;
+            --primary: #1d4ed8;
+            --secondary: #0f172a;
+            --accent: #25d366;
+            --gold: #f59e0b;
+            --light: #f8fafc;
             --white: #ffffff;
-            --shadow: 0 10px 30px rgba(0,0,0,0.1);
+            --text: #334155;
+            --border: #e2e8f0;
+            --shadow: 0 14px 38px rgba(15, 23, 42, 0.12);
+            --soft-shadow: 0 10px 24px rgba(29, 78, 216, 0.08);
+            --radius: 18px;
             --transition: all 0.3s ease;
         }
 
@@ -24,63 +26,162 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
+            font-family: "Poppins", sans-serif;
             scroll-behavior: smooth;
         }
 
         body {
-            color: var(--dark);
-            line-height: 1.6;
-            background-color: var(--white);
+            color: var(--text);
+            line-height: 1.65;
+            background: linear-gradient(180deg, #f8fbff 0%, #ffffff 45%);
         }
 
-        a { text-decoration: none; color: inherit; }
-        ul { list-style: none; }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-        /* --- NAVBAR --- */
+        ul {
+            list-style: none;
+        }
+
+        section {
+            padding: 5rem 7%;
+        }
+
         header {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.98);
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            padding: 0.95rem 7%;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.92);
+            border-bottom: 1px solid #e7ecf3;
             z-index: 1000;
-            padding: 1rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
             display: flex;
             align-items: center;
             gap: 10px;
+            color: var(--primary);
+            font-weight: 800;
+            letter-spacing: 0.3px;
         }
 
-        .logo i { font-size: 1.8rem; }
+        .logo i {
+            font-size: 1.8rem;
+        }
+
+        .logo small {
+            display: block;
+            color: var(--secondary);
+            font-weight: 500;
+            font-size: 0.7rem;
+            letter-spacing: 1.2px;
+        }
 
         .nav-menu {
             display: flex;
-            gap: 2rem;
+            gap: 1.8rem;
             align-items: center;
         }
 
         .nav-link {
             font-weight: 500;
-            color: var(--dark);
+            color: var(--secondary);
             transition: var(--transition);
         }
 
-        .nav-link:hover { color: var(--primary); }
+        .nav-link:hover {
+            color: var(--primary);
+        }
 
         .cta-btn {
-            background: var(--primary);
+            background: linear-gradient(135deg, var(--primary), #2563eb);
             color: var(--white);
-            padding: 0.6rem 1.5rem;
-            border-radius: 50px;
+            padding: 0.65rem 1.3rem;
+            border-radius: 999px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: var(--soft-shadow);
+            transition: var(--transition);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(37, 99, 235, 0.25);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            cursor: pointer;
+            font-size: 1.4rem;
+        }
+
+        .hero {
+            min-height: 95vh;
+            margin-top: 66px;
+            display: grid;
+            grid-template-columns: 1.15fr 1fr;
+            gap: 2.2rem;
+            align-items: center;
+            padding: 4rem 7%;
+            background:
+                radial-gradient(circle at 12% 25%, rgba(37, 99, 235, 0.14), transparent 35%),
+                radial-gradient(circle at 84% 78%, rgba(245, 158, 11, 0.13), transparent 30%);
+        }
+
+        .hero h1 {
+            color: var(--secondary);
+            font-size: clamp(2rem, 4vw, 3.6rem);
+            line-height: 1.14;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.06rem;
+            max-width: 620px;
+            margin-bottom: 1.4rem;
+        }
+
+        .highlight {
+            color: var(--primary);
+        }
+
+        .hero-badge-row {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            margin: 1.2rem 0 2rem;
+        }
+
+        .hero-badge {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            padding: 0.45rem 0.95rem;
+            font-size: 0.86rem;
+            font-weight: 600;
+            color: var(--secondary);
+            box-shadow: var(--soft-shadow);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-btn {
+            border-radius: 999px;
+            padding: 0.95rem 1.5rem;
+            font-size: 1rem;
             font-weight: 600;
             transition: var(--transition);
             display: inline-flex;
@@ -88,543 +189,698 @@
             gap: 8px;
         }
 
-        .cta-btn:hover {
-            background: var(--secondary);
-            transform: translateY(-2px);
-        }
-
-        /* --- HERO SECTION --- */
-        .hero {
-            height: 90vh;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1545173168-9f1947eebb8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: var(--white);
-            padding: 0 1rem;
-            margin-top: 60px;
-        }
-
-        .hero-content h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
-        }
-
-        .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-
-        .btn-group {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .hero-btn {
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: var(--transition);
-        }
-
         .btn-primary {
             background: var(--primary);
             color: var(--white);
-            border: 2px solid var(--primary);
         }
 
         .btn-whatsapp {
             background: var(--accent);
             color: var(--white);
-            border: 2px solid var(--accent);
         }
 
-        .hero-btn:hover { transform: scale(1.05); }
+        .hero-btn:hover {
+            transform: translateY(-3px);
+        }
 
-        /* --- SERVICES SECTION --- */
-        section { padding: 5rem 10%; }
+        .hero-visual {
+            position: relative;
+            min-height: 500px;
+        }
+
+        .hero-main-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: calc(var(--radius) + 8px);
+            box-shadow: var(--shadow);
+        }
+
+        .floating-card {
+            position: absolute;
+            background: var(--white);
+            border-radius: 14px;
+            padding: 0.95rem 1rem;
+            box-shadow: var(--shadow);
+            border: 1px solid #eef2f7;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            color: var(--secondary);
+        }
+
+        .floating-card i {
+            color: var(--primary);
+        }
+
+        .floating-card.one {
+            top: 18px;
+            left: -20px;
+        }
+
+        .floating-card.two {
+            bottom: 28px;
+            right: -20px;
+        }
+
+        .stats {
+            margin-top: 2.3rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1rem;
+        }
+
+        .stat-box {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 0.85rem;
+            text-align: center;
+            box-shadow: var(--soft-shadow);
+        }
+
+        .stat-box h3 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            line-height: 1.2;
+        }
 
         .section-header {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
         }
 
         .section-header h2 {
-            font-size: 2.5rem;
             color: var(--secondary);
-            margin-bottom: 0.5rem;
+            font-size: clamp(1.8rem, 3vw, 2.6rem);
+        }
+
+        .section-header p {
+            max-width: 760px;
+            margin: 0.7rem auto 0;
         }
 
         .divider {
+            width: 90px;
             height: 4px;
-            width: 80px;
-            background: var(--primary);
-            margin: 0 auto;
-            border-radius: 2px;
+            border-radius: 999px;
+            background: linear-gradient(to right, #3b82f6, #93c5fd);
+            margin: 0.7rem auto;
         }
 
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            gap: 1.35rem;
         }
 
         .service-card {
             background: var(--white);
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            text-align: center;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            box-shadow: var(--soft-shadow);
             transition: var(--transition);
-            border-bottom: 4px solid transparent;
         }
 
         .service-card:hover {
-            transform: translateY(-10px);
-            border-bottom: 4px solid var(--primary);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow);
         }
 
         .service-icon {
-            width: 70px;
-            height: 70px;
-            background: #e6f2ff;
+            width: 58px;
+            height: 58px;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
+            display: grid;
+            place-items: center;
+            background: #e8efff;
             color: var(--primary);
-            font-size: 1.8rem;
+            font-size: 1.4rem;
+            margin-bottom: 0.85rem;
         }
 
-        /* --- HOW IT WORKS (Process) --- */
+        .service-card h3 {
+            color: var(--secondary);
+            margin-bottom: 0.3rem;
+        }
+
+        .gallery {
+            background: #f2f7ff;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            min-height: 260px;
+            box-shadow: var(--soft-shadow);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 0.9rem 1rem;
+            background: linear-gradient(to top, rgba(2, 6, 23, 0.74), transparent);
+            color: var(--white);
+            font-size: 0.92rem;
+            font-weight: 500;
+        }
+
         .process-section {
-            background-color: #f0f7ff;
+            background: linear-gradient(180deg, #ffffff, #f5f9ff);
         }
 
         .process-steps {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 2rem;
-            text-align: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 1.15rem;
         }
 
         .step {
-            flex: 1;
-            min-width: 200px;
-            position: relative;
-        }
-
-        .step-number {
-            font-size: 4rem;
-            color: rgba(0, 123, 255, 0.1);
-            font-weight: 800;
-            position: absolute;
-            top: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 0;
-        }
-
-        .step-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .step h3 { margin-top: 1rem; color: var(--secondary); }
-
-        /* --- CONTACT SECTION --- */
-        .contact-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            justify-content: space-between;
-        }
-
-        .contact-info {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .contact-card {
             background: var(--white);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            padding: 1.2rem;
+            box-shadow: var(--soft-shadow);
+            text-align: center;
+        }
+
+        .step i {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .step span {
+            display: inline-block;
+            font-size: 0.78rem;
+            letter-spacing: 1px;
+            color: var(--primary);
+            margin-bottom: 0.35rem;
+            font-weight: 700;
+        }
+
+        .reviews {
+            background: var(--light);
+        }
+
+        .review-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+
+        .review-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            padding: 1rem;
+            box-shadow: var(--soft-shadow);
+        }
+
+        .review-card h4 {
+            color: var(--secondary);
+            font-size: 1rem;
+        }
+
+        .stars {
+            color: var(--gold);
+            margin: 0.2rem 0 0.45rem;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+        }
+
+        .contact-wrap {
+            display: grid;
+            grid-template-columns: 1.08fr 1fr;
+            gap: 1.4rem;
+            align-items: stretch;
+        }
+
+        .contact-panel {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--soft-shadow);
             padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            margin-bottom: 1rem;
+        }
+
+        .contact-item {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
+            background: #f8fbff;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 0.8rem 0.85rem;
+            margin-top: 0.8rem;
             transition: var(--transition);
         }
-        
-        .contact-card:hover { transform: translateX(10px); }
 
-        .contact-card i {
-            font-size: 1.5rem;
+        .contact-item:hover {
+            transform: translateX(6px);
+            background: #eff6ff;
+        }
+
+        .contact-item i {
             color: var(--primary);
+            font-size: 1.2rem;
         }
 
         .social-icons {
             display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
+            gap: 0.8rem;
+            margin-top: 1rem;
         }
 
         .social-btn {
-            width: 50px;
-            height: 50px;
+            width: 43px;
+            height: 43px;
             border-radius: 50%;
+            display: grid;
+            place-items: center;
             background: var(--light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--dark);
-            font-size: 1.2rem;
+            border: 1px solid var(--border);
             transition: var(--transition);
         }
 
         .social-btn:hover {
+            color: var(--white);
             background: var(--primary);
-            color: var(--white);
+            transform: translateY(-2px);
         }
 
-        /* --- FOOTER --- */
+        .contact-image {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            min-height: 340px;
+        }
+
+        .contact-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .contact-overlay {
+            position: absolute;
+            inset: auto 0 0 0;
+            color: var(--white);
+            padding: 1.1rem;
+            background: linear-gradient(to top, rgba(2, 6, 23, 0.78), transparent);
+            font-size: 0.9rem;
+        }
+
+        .map-wrap {
+            margin: 0 7% 2rem;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid #d8e2f3;
+        }
+
+        .map-wrap iframe {
+            width: 100%;
+            height: 380px;
+            border: 0;
+            display: block;
+        }
+
         footer {
-            background: var(--dark);
-            color: var(--white);
-            padding: 2rem 5%;
             text-align: center;
+            background: var(--secondary);
+            color: #d1d5db;
+            padding: 1.7rem 1rem;
         }
 
-        /* --- FLOATING WHATSAPP --- */
         .float-wa {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: #25d366;
-            color: white;
-            width: 60px;
-            height: 60px;
+            right: 22px;
+            bottom: 22px;
+            width: 58px;
+            height: 58px;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            z-index: 2000;
-            transition: var(--transition);
+            display: grid;
+            place-items: center;
+            color: var(--white);
+            background: var(--accent);
+            font-size: 1.7rem;
+            z-index: 1200;
+            box-shadow: 0 10px 28px rgba(37, 211, 102, 0.48);
             animation: pulse 2s infinite;
         }
 
-        .float-wa:hover { transform: scale(1.1); }
-
         @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-        }
-
-        /* --- MOBILE --- */
-        .mobile-menu-btn { display: none; font-size: 1.5rem; cursor: pointer; }
-
-        @media (max-width: 768px) {
-            .mobile-menu-btn { display: block; }
-            .nav-menu {
-                display: none;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                background: var(--white);
-                flex-direction: column;
-                padding: 2rem;
-                box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.65);
             }
-            .nav-menu.active { display: flex; }
-            .hero-content h1 { font-size: 2rem; }
-            section { padding: 3rem 5%; }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
         }
-        
-        /* Animation Classes */
+
         .fade-in {
             opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            transform: translateY(24px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
         }
+
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
         }
+
+        @media (max-width: 980px) {
+            .hero {
+                grid-template-columns: 1fr;
+                min-height: auto;
+                padding-top: 3rem;
+            }
+
+            .hero-visual {
+                min-height: 390px;
+            }
+
+            .hero-main-image {
+                height: 390px;
+            }
+
+            .floating-card.one {
+                left: 10px;
+            }
+
+            .floating-card.two {
+                right: 10px;
+            }
+
+            .contact-wrap {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 780px) {
+            header {
+                padding: 0.85rem 5%;
+            }
+
+            section {
+                padding: 4rem 5%;
+            }
+
+            .map-wrap {
+                margin: 0 5% 1.6rem;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 66px;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                border-bottom: 1px solid var(--border);
+                flex-direction: column;
+                padding: 1rem 1.2rem 1.4rem;
+                gap: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .hero {
+                margin-top: 62px;
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            .floating-card {
+                position: static;
+                margin-top: 0.7rem;
+                display: inline-flex;
+            }
+        }
     </style>
 </head>
 <body>
-
-    <a href="https://wa.me/919950456693?text=Hi, I would like to schedule a laundry pickup." class="float-wa" target="_blank">
+    <a href="https://wa.me/919950456693?text=Hi, I would like to schedule a laundry pickup." class="float-wa" target="_blank" aria-label="WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <header>
         <div class="logo">
-            <i class="fas fa-tshirt"></i>
+            <i class="fas fa-shirt"></i>
             <div>
-                <span style="display:block; line-height:1;">SHREE GANESH</span>
-                <span style="font-size: 0.8rem; font-weight:400; color:var(--dark);">DRY CLEANERS</span>
+                SHREE GANESH
+                <small>DRY CLEANERS</small>
             </div>
         </div>
         <div class="mobile-menu-btn" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
         <ul class="nav-menu">
             <li><a href="#home" class="nav-link">Home</a></li>
             <li><a href="#services" class="nav-link">Services</a></li>
-            <li><a href="#process" class="nav-link">How it Works</a></li>
+            <li><a href="#gallery" class="nav-link">Gallery</a></li>
+            <li><a href="#reviews" class="nav-link">Reviews</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
-            <li>
-                <a href="tel:9950456693" class="cta-btn">
-                    <i class="fas fa-phone-alt"></i> 9950-456693
-                </a>
-            </li>
+            <li><a href="tel:9950456693" class="cta-btn"><i class="fas fa-phone-alt"></i> 9950-456693</a></li>
         </ul>
     </header>
 
-    <div id="home" class="hero">
-        <div class="hero-content fade-in">
-            <h1>Premium Dry Cleaning<br>In Your City</h1>
-            <p>Eco-friendly chemicals. Hygienic processing. Doorstep Pickup.</p>
+    <section class="hero" id="home">
+        <div class="fade-in">
+            <h1>Give Your Clothes the <span class="highlight">Premium Finish</span> They Deserve</h1>
+            <p>Shree Ganesh Dry Cleaners delivers high-quality laundry and dry cleaning with eco-safe solutions, fabric-friendly care, and reliable doorstep service. From office wear to wedding outfits, every garment gets expert treatment and premium presentation.</p>
+            <div class="hero-badge-row">
+                <span class="hero-badge"><i class="fas fa-leaf"></i> Eco-Friendly Process</span>
+                <span class="hero-badge"><i class="fas fa-clock"></i> Quick Turnaround</span>
+                <span class="hero-badge"><i class="fas fa-shield-heart"></i> Hygiene First</span>
+            </div>
             <div class="btn-group">
-                <a href="tel:9950456693" class="hero-btn btn-primary">Call Now</a>
+                <a href="tel:9950456693" class="hero-btn btn-primary"><i class="fas fa-phone"></i> Call Now</a>
                 <a href="https://wa.me/919950456693?text=Hi, I need a laundry pickup." class="hero-btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Booking</a>
             </div>
+            <div class="stats">
+                <div class="stat-box">
+                    <h3>12K+</h3>
+                    <p>Garments Cleaned</p>
+                </div>
+                <div class="stat-box">
+                    <h3>4.9/5</h3>
+                    <p>Customer Rating</p>
+                </div>
+                <div class="stat-box">
+                    <h3>7 Days</h3>
+                    <p>Service Availability</p>
+                </div>
+            </div>
         </div>
-    </div>
+        <div class="hero-visual fade-in">
+            <img class="hero-main-image" src="https://images.unsplash.com/photo-1521656693074-0ef32e80a5d5?auto=format&fit=crop&w=1200&q=80" alt="Premium laundry workspace">
+            <div class="floating-card one"><i class="fas fa-star"></i> Trusted by Families</div>
+            <div class="floating-card two"><i class="fas fa-truck-fast"></i> Pickup & Delivery</div>
+        </div>
+    </section>
 
     <section id="services">
         <div class="section-header fade-in">
             <h2>Our Expert Services</h2>
             <div class="divider"></div>
-            <p style="margin-top:1rem; color:#666;">Handling your garments with world-class care</p>
+            <p>We combine modern techniques with careful hand inspection so your clothes remain fresh, elegant, and long-lasting after every wash and press cycle.</p>
         </div>
-        
         <div class="services-grid">
             <div class="service-card fade-in">
                 <div class="service-icon"><i class="fas fa-user-tie"></i></div>
                 <h3>Dry Cleaning</h3>
-                <p>Premium care for Suits, Blazers, Lehengas, and Delicate fabrics.</p>
+                <p>Premium cleaning for suits, blazers, sarees, lehengas, and delicate premium fabrics.</p>
             </div>
             <div class="service-card fade-in">
                 <div class="service-icon"><i class="fas fa-soap"></i></div>
-                <h3>Laundry & Wash</h3>
-                <p>Hygienic washing for daily wear with antibacterial treatment.</p>
+                <h3>Laundry Wash</h3>
+                <p>Gentle yet hygienic wash for regular wear with deodorizing and antibacterial treatment.</p>
             </div>
             <div class="service-card fade-in">
-                <div class="service-icon"><i class="fas fa-tshirt"></i></div>
+                <div class="service-icon"><i class="fas fa-shirt"></i></div>
                 <h3>Steam Press</h3>
-                <p>Wrinkle-free steam ironing to give your clothes a crisp look.</p>
+                <p>Precision steam ironing that gives your garments a sharp, wrinkle-free presentation.</p>
             </div>
             <div class="service-card fade-in">
                 <div class="service-icon"><i class="fas fa-shoe-prints"></i></div>
-                <h3>Shoe Cleaning</h3>
-                <p>Deep cleaning for Sneakers, Suede, and Leather footwear.</p>
+                <h3>Shoe Spa</h3>
+                <p>Deep cleaning and conditioning for sneakers, leather shoes, and suede footwear.</p>
             </div>
             <div class="service-card fade-in">
                 <div class="service-icon"><i class="fas fa-couch"></i></div>
                 <h3>Home Furnishing</h3>
-                <p>Cleaning for Curtains, Carpets, Blankets, and Sofa covers.</p>
+                <p>Care for curtains, blankets, carpets, and sofa covers with stain-removal expertise.</p>
             </div>
             <div class="service-card fade-in">
                 <div class="service-icon"><i class="fas fa-motorcycle"></i></div>
-                <h3>Express Delivery</h3>
-                <p>Fast turnaround time for when you need it urgently.</p>
+                <h3>Express Service</h3>
+                <p>Priority cleaning option for urgent requirements and fast scheduled delivery.</p>
             </div>
         </div>
     </section>
 
-    <section id="process" class="process-section">
+    <section class="gallery" id="gallery">
+        <div class="section-header fade-in">
+            <h2>Visual Gallery</h2>
+            <div class="divider"></div>
+            <p>A quick look at our clean environment, professional process, and premium garment care standards.</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item fade-in">
+                <img src="https://images.unsplash.com/photo-1610552050890-fe99536c2615?auto=format&fit=crop&w=900&q=80" alt="Clothes hanging after cleaning">
+                <div class="gallery-caption">Freshly finished garments arranged with care</div>
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&w=900&q=80" alt="Laundry machine process">
+                <div class="gallery-caption">Professional wash process for complete hygiene</div>
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=900&q=80" alt="Ironing station">
+                <div class="gallery-caption">Detailed finishing and premium steam pressing</div>
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?auto=format&fit=crop&w=900&q=80" alt="Folded clean clothes">
+                <div class="gallery-caption">Neatly packed delivery-ready clothing</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="process-section" id="process">
         <div class="section-header fade-in">
             <h2>How It Works</h2>
             <div class="divider"></div>
+            <p>Simple, transparent, and reliable from pickup request to final doorstep drop.</p>
         </div>
         <div class="process-steps">
             <div class="step fade-in">
-                <div class="step-number">01</div>
-                <div class="step-content">
-                    <i class="fas fa-calendar-check" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem;"></i>
-                    <h3>Book Pickup</h3>
-                    <p>Call or WhatsApp us to schedule a free doorstep pickup.</p>
-                </div>
+                <span>STEP 01</span>
+                <i class="fas fa-calendar-check"></i>
+                <h3>Schedule Pickup</h3>
+                <p>Call or message us on WhatsApp and choose a convenient pickup slot.</p>
             </div>
             <div class="step fade-in">
-                <div class="step-number">02</div>
-                <div class="step-content">
-                    <i class="fas fa-hands-bubbles" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem;"></i>
-                    <h3>Expert Cleaning</h3>
-                    <p>We process your clothes using eco-friendly chemicals.</p>
-                </div>
+                <span>STEP 02</span>
+                <i class="fas fa-jug-detergent"></i>
+                <h3>Smart Cleaning</h3>
+                <p>Each garment is sorted and cleaned with suitable products and process control.</p>
             </div>
             <div class="step fade-in">
-                <div class="step-number">03</div>
-                <div class="step-content">
-                    <i class="fas fa-truck" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem;"></i>
-                    <h3>Delivery</h3>
-                    <p>Fresh, ironed, and packed clothes delivered to your door.</p>
-                </div>
+                <span>STEP 03</span>
+                <i class="fas fa-shirt"></i>
+                <h3>Steam & Finish</h3>
+                <p>We perform premium finishing checks to ensure shape, shine, and freshness.</p>
+            </div>
+            <div class="step fade-in">
+                <span>STEP 04</span>
+                <i class="fas fa-truck"></i>
+                <h3>Deliver to You</h3>
+                <p>Neatly packed, quality-checked garments delivered safely to your doorstep.</p>
             </div>
         </div>
     </section>
- <section>
-    <style>
-  .review-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    font-family: sans-serif;
-    padding: 20px;
-    background-color: #f9f9f9;
-  }
 
-  .review-card {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    padding: 20px;
-    width: 100%; /* Full width on mobile */
-    max-width: 350px; /* Limits width on desktop */
-    border-top: 5px solid #4285F4; /* Google Blue */
-  }
-
-  .review-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-
-  .user-img {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    margin-right: 12px;
-    background-color: #eee;
-  }
-
-  .user-info {
-    line-height: 1.2;
-  }
-
-  .user-name {
-    font-weight: bold;
-    font-size: 16px;
-    display: block;
-  }
-
-  .stars {
-    color: #f4b400; /* Google Star Yellow */
-    font-size: 18px;
-    margin: 5px 0;
-  }
-
-  .review-text {
-    font-size: 14px;
-    color: #555;
-    line-height: 1.5;
-  }
-</style>
+    <section class="reviews" id="reviews">
+        <div class="section-header fade-in">
+            <h2>What Customers Say</h2>
+            <div class="divider"></div>
+            <p>Real feedback from happy customers who trust us with their daily and special garments.</p>
+        </div>
+        <div class="review-container">
+            <div class="review-card fade-in">
+                <h4>Sachin</h4>
+                <div class="stars">★★★★★</div>
+                <p>Excellent service quality and polite staff. Clothes always come fresh and perfectly packed.</p>
+            </div>
+            <div class="review-card fade-in">
+                <h4>Rahul</h4>
+                <div class="stars">★★★★★</div>
+                <p>Very reliable dry cleaner in the area with timely delivery and great finishing every time.</p>
+            </div>
+            <div class="review-card fade-in">
+                <h4>Bhavana</h4>
+                <div class="stars">★★★★★</div>
+                <p>My delicate outfits were handled carefully and looked like new after dry cleaning.</p>
+            </div>
+            <div class="review-card fade-in">
+                <h4>Dilip</h4>
+                <div class="stars">★★★★★</div>
+                <p>Quick response, neat work, and reasonable rates. Definitely my first choice now.</p>
+            </div>
+            <div class="review-card fade-in">
+                <h4>Sanjay</h4>
+                <div class="stars">★★★★★</div>
+                <p>Professional service with strong customer support and consistently good results.</p>
+            </div>
+            <div class="review-card fade-in">
+                <h4>Nobita</h4>
+                <div class="stars">★★★★★</div>
+                <p>Best experience so far. My clothes are always clean, crisp, and delivered as promised.</p>
+            </div>
+        </div>
     </section>
-<div class="review-container">
-  <div class="review-card">
-    <div class="review-header">
-      <div class="user-info">
-        <span class="user-name">Sachin</span>
-        <div class="stars">★★★★★</div>
-      </div>
-    </div>
-    <p class="review-text">"Excellent service! The team was professional and the results were better than expected. Highly recommend to everyone."</p>
-  </div>
-  
-  <div class="review-card">
-    <div class="review-header">
-      <div class="user-info">
-        <span class="user-name">Rahul</span>
-        <div class="stars">★★★★★</div>
-      </div>
-    </div>
-    <p class="review-text">"Clothes are cleaned with great care and delivered on time. Best dry cleaning service in the area!"</p>
-  </div>
-
-  <div class="review-card">
-    <div class="review-header">
-      <div class="user-info">
-        <span class="user-name">Bhavana</span>
-        <div class="stars">★★★★★</div>
-      </div>
-    </div>
-    <p class="review-text">"I am very satisfied with their dry cleaning and laundry service. They handle delicate clothes very carefully and the results are always impressive. Clean, professional, and trustworthy service."</p>
-  </div>
-
-
-  <div class="review-card">
-    <div class="review-header">
-      <div class="user-info">
-        <span class="user-name">Dilip</span>
-        <div class="stars">★★★★★</div>
-      </div>
-    </div>
-    <p class="review-text">"One of the best dry cleaners I’ve used. Quick service, neat finishing, and friendly staff. My clothes look brand new every time. Definitely my go-to dry cleaner!"</p>
-  </div>
-  
-  <div class="review-card">
-    <div class="review-header">
-      <div class="user-info">
-        <span class="user-name">Sanjay</span>
-        <div class="stars">★★★★★</div>
-      </div>
-    </div>
-    <p class="review-text">"If you are searching for a professional dry cleaner near you, this is the right place. High-quality cleaning, timely service, and excellent customer support. 100% satisfied!"</p>
-  </div>
-  
-  <div class="review-card">
-    <div class="review-header">
-      <div class="user-info">
-        <span class="user-name">Nobita</span>
-        <div class="stars">★★★★★</div>
-      </div>
-    </div>
-    <p class="review-text">"Excellent dry cleaning service! My clothes always come back fresh, perfectly cleaned, and well-pressed. The staff is polite, service is fast, and prices are reasonable. Highly recommended for anyone looking for reliable dry cleaning near me."</p>
-  </div>
-  
-</div>
 
     <section id="contact">
         <div class="section-header fade-in">
-            <h2>Contact Us</h2>
+            <h2>Contact & Booking</h2>
             <div class="divider"></div>
+            <p>Need quick rates, corporate package details, or a same-day pickup slot? Reach out now.</p>
         </div>
-        <div class="contact-container">
-            <div class="contact-info fade-in">
-                <h3>Get in Touch</h3>
-                <p style="margin-bottom: 2rem;">We are here to serve you. Contact us for rates and bulk orders.</p>
-                
-                <a href="tel:9950456693" class="contact-card">
+        <div class="contact-wrap">
+            <div class="contact-panel fade-in">
+                <h3 style="color: var(--secondary);">Get in Touch</h3>
+                <p style="margin-top: 0.4rem;">We are available for daily service, family plans, bulk orders, and event wear care.</p>
+
+                <a href="tel:9950456693" class="contact-item">
                     <i class="fas fa-phone-volume"></i>
                     <div>
-                        <h4>Phone</h4>
+                        <strong>Phone</strong>
                         <p>+91 99504 56693</p>
                     </div>
                 </a>
-                
-                <a href="https://wa.me/919950456693" class="contact-card">
-                    <i class="fab fa-whatsapp-square"></i>
+                <a href="https://wa.me/919950456693" class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
                     <div>
-                        <h4>WhatsApp</h4>
-                        <p>Chat with us</p>
+                        <strong>WhatsApp</strong>
+                        <p>Instant booking support</p>
+                    </div>
+                </a>
+                <a href="https://maps.app.goo.gl/2CET2PLKk7V8Wr288" class="contact-item">
+                    <i class="fas fa-location-dot"></i>
+                    <div>
+                        <strong>Store Location</strong>
+                        <p>Open in Google Maps</p>
                     </div>
                 </a>
 
@@ -634,48 +890,39 @@
                     <a href="https://maps.app.goo.gl/2CET2PLKk7V8Wr288" class="social-btn" title="Google Map"><i class="fas fa-map-marker-alt"></i></a>
                 </div>
             </div>
-            
-            <div class="contact-image fade-in" style="flex:1; min-width:300px; height: 350px; background: url('https://images.unsplash.com/photo-1517677208171-0bc6799a631f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover; border-radius: 15px;">
+
+            <div class="contact-image fade-in">
+                <img src="https://images.unsplash.com/photo-1517677208171-0bc6799a631f?auto=format&fit=crop&w=1200&q=80" alt="Store and service visual">
+                <div class="contact-overlay">
+                    Premium care, modern process, and reliable service with local trust.
                 </div>
+            </div>
         </div>
     </section>
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
-        
-        
-  <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.775220442018!2d75.83210241010208!3d25.14328917765285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396f84c1965e6d31%3A0x9be61f340d26aabc!2sSHREE%20GANESH%20DRY%20CLEANERS!5e0!3m2!1sen!2sin!4v1766423666467!5m2!1sen!2sin" 
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
-    allowfullscreen="" 
-    loading="lazy" 
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-</div>
-    
+
+    <div class="map-wrap fade-in">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.775220442018!2d75.83210241010208!3d25.14328917765285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396f84c1965e6d31%3A0x9be61f340d26aabc!2sSHREE%20GANESH%20DRY%20CLEANERS!5e0!3m2!1sen!2sin!4v1766423666467!5m2!1sen!2sin" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
 
     <footer>
-        <p>&copy; 2024 Shree Ganesh Dry Cleaners. All Rights Reserved.</p>
-        <p style="font-size: 0.9rem; margin-top: 10px; opacity: 0.7;">
-            Designed for Premium Care & Hygiene
-        </p>
+        <p>&copy; 2026 Shree Ganesh Dry Cleaners. All Rights Reserved.</p>
+        <p style="font-size: 0.9rem; margin-top: 7px; opacity: 0.82;">Designed for premium fabric care, hygiene, and customer comfort.</p>
     </footer>
 
     <script>
-        // Mobile Menu Toggle
         function toggleMenu() {
-            document.querySelector('.nav-menu').classList.toggle('active');
+            document.querySelector(".nav-menu").classList.toggle("active");
         }
 
-        // Scroll Animation Observer
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
+            entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+                    entry.target.classList.add("visible");
                 }
             });
-        }, { threshold: 0.1 });
+        }, { threshold: 0.12 });
 
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
     </script>
 </body>
 </html>
